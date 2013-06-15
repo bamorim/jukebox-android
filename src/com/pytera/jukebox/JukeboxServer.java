@@ -68,7 +68,7 @@ public class JukeboxServer {
     }
 
     public String getMusicImagePath(Music m) {
-        return getWebUrl()+apiPath+"music/"+m.getPath()+"/image";
+        return getWebUrl()+apiPath+"music/"+m.getId()+"/image";
     }
 
     public String getWebUrl() {
@@ -95,7 +95,7 @@ public class JukeboxServer {
     }
 
     public boolean queueMusic(Music music){
-    	Response r = jukebox.queue(music.getPath(), mToken);
+    	Response r = jukebox.queue(music.getId(), mToken);
     	if((r.getStatus() / 100) == 2)
     		return true;
     	return false;

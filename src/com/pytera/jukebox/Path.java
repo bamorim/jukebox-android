@@ -8,10 +8,8 @@ import org.json.JSONObject;
  */
 public class Path {
     private String name;
-    private String path;
-    private String parent_path;
+    private String id;
     public String getName(){return name;}
-    public String getPath(){return path;}
-    public String getParentPath(){return parent_path;}
+    public String getId(){return id;}
 }
 

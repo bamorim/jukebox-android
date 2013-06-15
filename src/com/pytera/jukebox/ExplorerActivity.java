@@ -80,10 +80,10 @@ public class ExplorerActivity extends SherlockListActivity {
         super.onListItemClick(l, v, position, id);
         Path p = (Path) getListAdapter().getItem(position);
         if(p.getClass() == Path.class)
-            browseTo(p.getPath());
+            browseTo(p.getId());
         else if(p.getClass() == Music.class) {
             Intent intent = new Intent(this, MusicActivity.class);
-            intent.putExtra("path", p.getPath());
+            intent.putExtra("path", p.getId());
             this.startActivity(intent);
         }
     }
